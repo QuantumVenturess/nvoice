@@ -1,0 +1,18 @@
+<div class="centerForm">
+	<div class="welcome">
+		<p>Welcome to Nvoice</p>
+	</div>
+	<%= form_for(:session, url: sessions_path) do |f| %>
+		<div class="field">
+			<p>Email</p>
+			<%= f.text_field :email, tabindex: 1 %>
+		</div>
+		<div class="field">
+			<p>Password</p>
+			<%= f.password_field :password, tabindex: 2, autocomplete: "off" %>
+		</div>
+		<div class="action">
+			<%= f.submit "Sign in", tabindex: 3 %>
+		</div>
+	<% end %>
+</div>

@@ -1,0 +1,41 @@
+<%= content_for :head do %>
+<script>
+$(document).ready(function() {
+	var edit = $('#editHeader');
+	if (edit.length > 0) {
+		edit.css("display", "inline-block");
+		$('#editHeader a').attr("href", "<%= items_invoice_path(@invoice) %>")
+	}
+})
+</script>
+<% end %>
+<div class="invoice">
+	<div class="invoiceLogo">
+		<%= image_tag '/assets/Samurai.png' %>
+		<div class="invoiceUser">
+			<h1><%= @user.name %></h1>
+			<p><%= @user.address %></p>
+			<p><%= @user.city %>, <%= @user.state %> <%= @user.zip %></p>
+			<p><%= @user_number %></p>
+			<p><%= @user.email %></p>
+		</div>
+	</div>
+	<div class="invoiceInfo">
+		<h1>Invoice</h1>
+		<p>ID <%= @invoice.id %></p>
+		<p><%= @invoice.created_at.strftime('%B %d, %Y') %></p>
+	</div>
+	<div class="clear"></div>
+	<div class="invoiceClient">
+		<% if @invoice.paid? %>
+			<div class="invoicePaid">
+				Paid
+			</div>
+		<% end %>
+		<h1><%= @client.name %></h1>
+		<p><%= @client.address %></p>
+		<p><%= @client.city %>, <%= @client.state %> <%= @client.zip %></p>
+		<p><%= @client_number %></p>
+	</div>
+	<%= render 'invoice_items' %>
+</div>

@@ -1,0 +1,63 @@
+.header {
+	background: rgb(196, 43, 38);
+	height: 40px;
+	padding: 0 10px;
+}
+
+.headerNav {
+	float: right;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.headerNav li {
+	display: inline-block;
+}
+
+.headerNav a {
+	color: rgb(245, 245, 245);
+	display: block;
+	font-size: 14px;
+	height: 14px;
+	padding: 13px 10px 13px 10px;
+}
+
+.headerNav a:hover {
+	background: rgb(207, 25, 14);
+}
+
+#editHeader, #deleteHeader {
+	display: none;
+}
+
+.accountMenu {
+	background: rgb(70, 70, 70);
+	border: 1px solid rgb(196, 43, 38);
+	border-top: none;
+	display: none;
+	position: absolute;
+	right: 10px;
+	top: 40px;
+	width: 200px;
+	z-index: 1000;
+}
+
+.accountMenu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.accountMenu a {
+	color: rgb(210, 210, 210);
+	display: block;
+	font-size: 14px;
+	height: 14px;
+	padding: 10px 15px;
+}
+
+.accountMenu a:hover {
+	color: rgb(245, 245, 245);
+	background: rgb(50, 50, 50);
+}

@@ -1,0 +1,23 @@
+<div class="item <%= cycle('odd', 'even') %>">
+	<div class="itemDate">
+		<% if current_user.admin? %>
+			<%= link_to item.date.strftime('%B %d, %y'), item, method: :delete, 
+				confirm: 'Delete item?', class: 'grey70' %>
+		<% else %>
+			<p><%= item.date.strftime('%B %d, %y') %></p>
+		<% end %>
+	</div>
+	<div class="itemDetails">
+		<p><%= item.details %></p>
+	</div>
+	<div class="itemHours">
+		<p><%= item.hours %></p>
+	</div>
+	<div class="itemRate">
+		<p><%= number_to_currency(item.rate) %></p>
+	</div>
+	<div class="itemAmount">
+		<p><%= number_to_currency(item.amount) %></p>
+	</div>
+	<div class="clear"></div>
+</div>

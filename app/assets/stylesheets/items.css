@@ -1,0 +1,38 @@
+.item {
+	float: left;
+	padding: 10px 20px;
+	width: 918px;
+}
+
+.item div {
+	float: left;
+	font-size: 14px;
+}
+
+.item p {
+	line-height: 18px;
+}
+
+.itemDate {
+	width: 20%;
+}
+
+.itemDetails {
+	width: 40%;
+}
+
+.itemHours, .itemRate, .itemAmount {
+	text-align: right;
+}
+
+.itemHours {
+	width: 10%;
+}
+
+.itemRate, .itemAmount {
+	width: 15%;
+}
+
+.even {
+	background: rgb(234, 180, 142);
+}

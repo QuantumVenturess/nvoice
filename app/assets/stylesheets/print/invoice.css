@@ -1,0 +1,142 @@
+@media print {
+
+.invoice {
+	background: rgb(255, 255, 255);
+	border: 1px solid rgb(196, 43, 38);
+	padding: 40px 20px;
+}
+
+.invoiceLogo {
+	float: left;
+}
+
+.invoiceLogo img {
+	float: left;
+	max-height: 100px;
+	max-width: 100px;
+}
+
+.invoiceUser {
+	color: rgb(140, 140, 140);
+	float: left;
+	margin: 0 0 0 20px;
+}
+
+.invoiceUser h1, .invoiceClient h1 {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 20px;
+	margin: 0 0 5px 0;
+}
+
+.invoiceUser p, .invoiceClient p {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.invoiceInfo {
+	float: right;
+	text-align: right;
+}
+
+.invoiceInfo h1 {
+	font-size: 36px;
+	font-weight: 500;
+	line-height: 34px;
+	margin: 0 0 20px 0;
+}
+
+.invoiceInfo p {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.invoicePaid {
+	color: rgb(97, 196, 25);
+	float: right;
+	font-size: 36px;
+	text-align: right;
+}
+
+.invoiceClient {
+	border-bottom: 4px double rgb(210, 210, 210);
+	border-top: 4px double rgb(210, 210, 210);
+	margin: 40px 0;
+	padding: 40px 0 40px 20px;
+}
+
+.invoiceItemLabels {
+	border-bottom: 1px solid rgb(210, 210, 210);
+	font-size: 14px;
+	height: 16px;
+	padding: 10px 20px;
+}
+
+.invoiceItemLabels div {
+	float: left;
+}
+
+.invoiceTotal {
+	float: right;
+	margin: 40px 0 0 0;
+}
+
+.invoiceTotal h1 {
+	float: left;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 20px;
+	margin: 0 47px 0 0;
+	padding: 21px 0;
+}
+
+.invoiceTotalAmount {
+	border: 1px solid rgb(210, 210, 210);
+	color: rgb(70, 70, 70);
+	float: right;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 20px;
+}
+
+/* Items */
+.item {
+	float: left;
+	padding: 10px 20px;
+	width: 613px;
+}
+
+.item div {
+	float: left;
+	font-size: 14px;
+}
+
+.item p {
+	line-height: 18px;
+}
+
+.itemDate {
+	width: 20%;
+}
+
+.itemDetails {
+	width: 40%;
+}
+
+.itemHours, .itemRate, .itemAmount {
+	text-align: right;
+}
+
+.itemHours {
+	width: 10%;
+}
+
+.itemRate, .itemAmount {
+	width: 15%;
+}
+
+.even {
+	background: rgb(234, 180, 142);
+}
+
+}

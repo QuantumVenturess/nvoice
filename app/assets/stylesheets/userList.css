@@ -1,0 +1,42 @@
+.users {
+	width: 950px;
+}
+
+.usersLabel {
+	font-size: 14px;
+	padding: 10px 0;
+}
+
+.user {
+	border-top: 1px solid rgb(210, 210, 210);
+	font-size: 14px;
+	padding: 20px 0;
+}
+
+.userId {
+	float: left;
+	padding: 0 0 0 20px;
+	width: 50px;
+}
+
+.userName {
+	float: left;
+	width: 300px;
+}
+
+.userInvoices, .userPaid {
+	float: left;
+	width: 100px;
+}
+
+.userTotal, .userDue {
+	float: left;
+	width: 150px;
+}
+
+.userEdit {
+	float: right;
+	padding: 0 20px 0 0;
+	text-align: right;
+	width: 60px;
+}

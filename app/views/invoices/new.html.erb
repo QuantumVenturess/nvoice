@@ -1,0 +1,10 @@
+<%= render 'shared/page_header' %>
+<%= form_for @invoice do |f| %>
+	<div class="field">
+		<p>Client</p>
+		<%= f.select :client_id, options_for_select(@clients) %>
+	</div>
+	<div class="action">
+		<%= f.submit "Submit" %>
+	</div>
+<% end %>

@@ -1,0 +1,24 @@
+<ul class="headerNav">
+	<% if signed_in? %>
+		<% if current_user.admin? %>
+			<li id="editHeader"><%= link_to 'Edit', '#' %></li>
+			<li id="deleteHeader"></li>
+		<% end %>
+		<li><%= link_to "#{current_user.name.split(" ")[0]}", current_user, class: "account" %></li>
+	<% end %>
+</ul>
+<% if signed_in? %>
+	<div class="accountMenu">
+		<ul>
+			<% if current_user.admin? %>
+				<li><%= link_to 'Bills', invoices_path %></li>
+				<li><%= link_to 'New Bill', new_invoice_path %></li>
+				<li><%= link_to 'Clients', users_path %></li>
+				<li><%= link_to 'New Client', new_user_path %></li>
+			<% end %>
+			<li><%= link_to 'Invoices', current_user %></li>
+			<li><%= link_to 'Edit Profile', edit_user_path(current_user) %></li>
+			<li><%= link_to 'Sign out', signout_path %></li>
+		</ul>
+	</div>
+<% end %>

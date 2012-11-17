@@ -1,0 +1,24 @@
+<div class="user">
+	<div class="userId">
+		<%= user.id %>
+	</div>
+	<div class="userName">
+		<%= link_to user.name, user %>
+	</div>
+	<div class="userInvoices">
+		<%= user.invoices.size %>
+	</div>
+	<div class="userPaid">
+		<%= user.paid %>
+	</div>
+	<div class="userTotal">
+		<%= number_to_currency(user.invoice_total) %>
+	</div>
+	<div class="userDue">
+		<%= number_to_currency(user.invoice_due) %>
+	</div>
+	<div class="userEdit">
+		<%= link_to 'Edit', edit_user_path(user) %>
+	</div>
+	<div class="clear"></div>
+</div>

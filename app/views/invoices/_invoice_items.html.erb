@@ -1,0 +1,28 @@
+<div class="invoiceItems">
+	<div class="invoiceItemLabels">
+		<div class="itemDate">
+			Date
+		</div>
+		<div class="itemDetails">
+			Details
+		</div>
+		<div class="itemHours">
+			Hours
+		</div>
+		<div class="itemRate">
+			Rate
+		</div>
+		<div class="itemAmount">
+			Amount
+		</div>
+	</div>
+	<%= render @items %>
+	<div class="clear"></div>
+</div>
+<div class="invoiceTotal">
+	<h1>Invoice Total</h1>
+	<div class="invoiceTotalAmount">
+		<p><%= number_to_currency(@invoice.total) %></p>
+	</div>
+</div>
+<div class="clear"></div>

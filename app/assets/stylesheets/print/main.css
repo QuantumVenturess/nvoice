@@ -1,0 +1,72 @@
+@media print {
+
+@page {
+	margin: 10mm;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background: rgb(245, 245, 245);
+	color: rgb(70, 70, 70);
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow-x: hidden;
+	position: relative;
+}
+
+.content {
+	margin: 0 auto;
+	padding: 0 0 80px 0;
+	width: 695px;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+	color: rgb(63, 171, 218);
+	text-decoration: none;
+}
+
+.clear {
+	clear: both;
+	font-size: 1px;
+	height: 0;
+	margin: 0;
+	line-height: 0;
+	padding: 0;
+}
+
+.red {
+	color: rgb(207, 25, 14);
+}
+
+.grey70 {
+	color: rgb(70, 70, 70);
+}
+
+.grey140 {
+	color: rgb(140, 140, 140);
+}
+
+.errorExplanation ul {
+	padding: 0 0 0 20px;
+	margin: 0 0 20px 0;
+}
+
+.errorExplanation ul li {
+	color: rgb(255, 25, 0);
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	padding: 5px;
+}
+
+}

@@ -1,0 +1,80 @@
+.field {
+	margin: 0 0 10px 0;
+}
+
+.field p {
+	font-size: 14px;
+	margin: 0 0 10px 0;
+}
+
+.field input, .field select, .field textarea {
+	border: 1px solid rgb(210, 210, 210);
+	color: rgb(70, 70, 70);
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	margin: 0;
+	padding: 10px;
+}
+
+.field input {
+	width: 400px;
+}
+
+.field textarea {
+	height: 70px;
+	resize: none;
+	width: 400px;
+}
+
+.field input:hover, .field select:hover, .field textarea:hover {
+	border: 1px solid rgb(140, 140, 140);
+}
+
+.field input:focus, .field select:focus, .field textarea:focus {
+	border: 1px solid rgb(63, 171, 218);
+	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
+	-khtml-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
+	-moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
+	-ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
+	-o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
+	outline: none;
+}
+
+.action {
+	margin: 20px 0 0 0;
+}
+
+.action input, .action a {
+	border: none;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	margin: 0;
+	padding: 10px 20px;
+}
+
+.action input {
+	background: rgb(63, 171, 218);
+	color: rgb(245, 245, 245);
+}
+
+.action a {
+	background: rgb(210, 210, 210);
+	color: rgb(70, 70, 70);
+}
+
+.action input:hover, .action input:focus {
+	background: rgb(73, 181, 228);
+	cursor: pointer;
+	outline: none;
+}
+
+.action a:hover {
+	background: rgb(200, 200, 200);
+}
+
+/* Center */
+.centerForm {
+	margin: 0 auto;
+	width: 450px;
+}

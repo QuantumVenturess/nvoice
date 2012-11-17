@@ -1,0 +1,74 @@
+.itemForm {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 20px;
+	width: 100%;
+}
+
+.itemFormDate {
+	margin: 0 10px 0 0;
+	width: 211px;
+}
+
+.itemFormName {
+	margin: 0 10px 0 0;
+	width: 45%;
+}
+
+.itemFormDate, .itemFormDetails {
+	float: left;
+}
+
+.itemFormHours {
+	width: 10%;
+}
+
+.itemFormRate {
+	margin: 0 0 0 10px;
+	width: 15%;
+}
+
+.itemFormHours, .itemFormRate {
+	float: right;
+}
+
+.itemFormHours, .itemFormRate, .itemFormHours input, .itemFormRate input {
+	text-align: right;
+}
+.itemFormField p {
+	font-size: 14px;
+	margin: 0 0 10px 0;
+}
+
+.itemFormField input {
+	border: 1px solid rgb(210, 210, 210);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: rgb(70, 70, 70);
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	margin: 0;
+	padding: 10px;
+	width: 100%;
+}
+
+.itemFormField input:hover {
+	border: 1px solid rgb(140, 140, 140);
+}
+
+.itemFormField input:focus {
+	border: 1px solid rgb(63, 171, 218);
+	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
+	-khtml-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
+	-moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
+	-ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
+	-o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
+	outline: none;
+}
+
+.itemForm .action {
+	float: right;
+}
