@@ -1,4 +1,4 @@
-<div class="invoicePartial">
+<div class="invoicePartial" id="invoice_<%= invoice.id %>">
 	<div class="invoicePartialId">
 		<p><%= invoice.id %></p>
 	</div>
@@ -12,19 +12,7 @@
 		<p><%= number_to_currency(invoice.total) %></p>
 	</div>
 	<div class="invoicePartialPaid">
-		<% if current_user.admin? %>
-			<% if invoice.paid? %>
-				<%= link_to 'Paid', toggle_paid_invoice_path(invoice) %>
-			<% else %>
-				<%= link_to 'Not Paid', toggle_paid_invoice_path(invoice) %>
-			<% end %>
-		<% else %>
-			<% if invoice.paid? %>
-				Paid
-			<% else %>
-				Not Paid
-			<% end %>
-		<% end %>
+		<%= render partial: 'invoices/paid_status', locals: { invoice: invoice } %>
 	</div>
 	<div class="clear"></div>
 </div>

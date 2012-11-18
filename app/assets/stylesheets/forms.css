@@ -61,6 +61,7 @@
 .action a {
 	background: rgb(210, 210, 210);
 	color: rgb(70, 70, 70);
+	margin: 0 0 0 5px;
 }
 
 .action input:hover, .action input:focus {

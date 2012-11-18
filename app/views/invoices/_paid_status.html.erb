@@ -1,0 +1,13 @@
+<% if current_user.admin? %>
+	<% if invoice.paid? %>
+		<%= link_to 'Paid', toggle_paid_invoice_path(invoice), remote: true %>
+	<% else %>
+		<%= link_to 'Not Paid', toggle_paid_invoice_path(invoice), remote: true %>
+	<% end %>
+<% else %>
+	<% if invoice.paid? %>
+		Paid
+	<% else %>
+		Not Paid
+	<% end %>
+<% end %>

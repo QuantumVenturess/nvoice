@@ -66,13 +66,18 @@ class InvoicesController < ApplicationController
 
 	def items
 		@invoice = Invoice.find(params[:id])
-		@title = "Invoice #{@invoice.id}"
-		@item = Item.new
-		@items = @invoice.items.order('date ASC')
-		@user = @invoice.user
-		@client = @invoice.client
-		@user_number = @user.phone_number
-		@client_number = @client.phone_number
+		if @invoice.paid?
+			flash[:notice] = 'You cannot edit an invoice that has been paid'
+			redirect_to @invoice
+		else
+			@title = "Invoice #{@invoice.id}"
+			@item = Item.new
+			@items = @invoice.items.order('date DESC')
+			@user = @invoice.user
+			@client = @invoice.client
+			@user_number = @user.phone_number
+			@client_number = @client.phone_number
+		end
 	end
 
 	def toggle_paid
@@ -83,6 +88,13 @@ class InvoicesController < ApplicationController
 			invoice.paid = true
 		end
 		invoice.save
-		redirect_to invoices_path
+		respond_to do |format|
+			format.html {
+				redirect_to invoices_path
+			}
+			format.js {
+				@invoice = invoice
+			}
+		end
 	end
 end

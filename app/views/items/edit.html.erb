@@ -1,0 +1,28 @@
+<div class="itemForm">
+	<%= render 'shared/page_header' %>
+	<%= form_for @item do |f| %>
+		<%= render 'shared/error_messages', object: f.object %>
+		<%= f.hidden_field :invoice_id, value: @invoice.id %>
+		<div class="itemFormField itemFormDate">
+			<p>Date</p>
+			<%= f.text_field :date, tabindex: 1, autocomplete: 'off' %>
+		</div>
+		<div class="field itemFormDetails">
+			<p>Details</p>
+			<%= f.text_area :details, tabindex: 2 %>
+		</div>
+		<div class="itemFormField itemFormRate">
+			<p>Rate</p>
+			<%= f.text_field :rate, tabindex: 4 %>
+		</div>
+		<div class="itemFormField itemFormHours">
+			<p>Hours</p>
+			<%= f.text_field :hours, tabindex: 3 %>
+		</div>
+		<div class="action">
+			<%= f.submit 'Submit', tabindex: 5 %>
+			<%= link_to 'Cancel', items_invoice_path(@invoice) %>
+		</div>
+	<% end %>
+	<div class="clear"></div>
+</div>

@@ -1,0 +1,2 @@
+$('#invoice_' + <%= @invoice.id %> + ' .invoicePartialPaid').html(
+	"<%= escape_javascript(render(partial: 'paid_status', locals: { invoice: @invoice })) %>")

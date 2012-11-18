@@ -1,0 +1,2 @@
+$('#item_' + <%= @item_id %>).remove();
+$('.invoiceTotalAmount').text("<%= number_to_currency(@invoice.total) %>");

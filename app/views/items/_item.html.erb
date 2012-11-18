@@ -1,14 +1,18 @@
-<div class="item <%= cycle('odd', 'even') %>">
+<div class="item <%= cycle('odd', 'even') %>" id="item_<%= item.id %>">
 	<div class="itemDate">
 		<% if current_user.admin? %>
 			<%= link_to item.date.strftime('%B %d, %y'), item, method: :delete, 
-				confirm: 'Delete item?', class: 'grey70' %>
+				remote: true, confirm: 'Delete item?', class: 'grey70' %>
 		<% else %>
 			<p><%= item.date.strftime('%B %d, %y') %></p>
 		<% end %>
 	</div>
 	<div class="itemDetails">
-		<p><%= item.details %></p>
+		<% if current_user.admin? %>
+			<%= link_to to_html(item.details), edit_item_path(item), class: 'grey70' %>
+		<% else %>
+			<p><%= to_html(item.details) %></p>
+		<% end %>
 	</div>
 	<div class="itemHours">
 		<p><%= item.hours %></p>

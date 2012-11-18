@@ -1,17 +1,19 @@
-<%= content_for :head do %>
-<script>
-$(document).ready(function() {
-	var edit = $('#editHeader');
-	if (edit.length > 0) {
-		edit.css("display", "inline-block");
-		$('#editHeader a').attr("href", "<%= items_invoice_path(@invoice) %>")
-	}
-})
-</script>
+<% unless @invoice.paid? %>
+	<%= content_for :head do %>
+	<script>
+	$(document).ready(function() {
+		var edit = $('#editHeader');
+		if (edit.length > 0) {
+			edit.css("display", "inline-block");
+			$('#editHeader a').attr("href", "<%= items_invoice_path(@invoice) %>")
+		}
+	})
+	</script>
+	<% end %>
 <% end %>
 <div class="invoice">
 	<div class="invoiceLogo">
-		<%= image_tag '/assets/Samurai.png' %>
+		<%= image_tag '/assets/samurai.png' %>
 		<div class="invoiceUser">
 			<h1><%= @user.name %></h1>
 			<p><%= @user.address %></p>

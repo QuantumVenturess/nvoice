@@ -2,8 +2,16 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 20px;
+	padding: 0 20px;
 	width: 100%;
+}
+
+.itemForm .field {
+	margin: 0;
+}
+
+.itemForm textarea {
+	height: 64px;
 }
 
 .itemFormDate {
@@ -11,9 +19,8 @@
 	width: 211px;
 }
 
-.itemFormName {
-	margin: 0 10px 0 0;
-	width: 45%;
+.itemFormDetails {
+	height: 112px;
 }
 
 .itemFormDate, .itemFormDetails {
@@ -71,4 +78,5 @@
 
 .itemForm .action {
 	float: right;
+	margin: 12px 0 0 0;
 }
