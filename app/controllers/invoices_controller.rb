@@ -1,5 +1,5 @@
 class InvoicesController < ApplicationController
-	before_filter :authenticate
+	before_filter :authenticate, except: :show
 	before_filter :admin_user, except: :show
 
 	# Correct user
@@ -11,8 +11,10 @@ class InvoicesController < ApplicationController
 		@client = @invoice.client
 		@user_number = @user.phone_number
 		@client_number = @client.phone_number
-		if !current_user.admin? && current_user != @invoice.client
-			redirect_to current_user
+		if signed_in?
+			if !current_user.admin? && current_user != @invoice.client
+				redirect_to current_user
+			end
 		end
 	end
 

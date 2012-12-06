@@ -1,6 +1,6 @@
 <div class="item <%= cycle('odd', 'even') %>" id="item_<%= item.id %>">
 	<div class="itemDate">
-		<% if current_user.admin? %>
+		<% if signed_in? && current_user.admin? %>
 			<%= link_to item.date.strftime('%B %d, %y'), item, method: :delete, 
 				remote: true, confirm: 'Delete item?', class: 'grey70' %>
 		<% else %>
@@ -8,7 +8,7 @@
 		<% end %>
 	</div>
 	<div class="itemDetails">
-		<% if current_user.admin? %>
+		<% if signed_in? && current_user.admin? %>
 			<%= link_to to_html(item.details), edit_item_path(item), class: 'grey70' %>
 		<% else %>
 			<p><%= to_html(item.details) %></p>

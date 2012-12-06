@@ -6,6 +6,8 @@
 			<li id="deleteHeader"></li>
 		<% end %>
 		<li><%= link_to "#{current_user.name.split(" ")[0]}", current_user, class: "account" %></li>
+	<% else %>
+		<li><%= link_to 'Sign in', signin_path %></li>
 	<% end %>
 </ul>
 <% if signed_in? %>
