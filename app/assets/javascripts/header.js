@@ -1,14 +1,14 @@
 $(document).ready(function() {
 	var link = $('.account');
 	var menu = $('.accountMenu');
-	link.live('mouseover', function() {
+	$(document).on('mouseover', '.account', function() {
 		menu.show();
 		return false;
-	})
-	menu.live('mouseover', function() {
+	});
+	$(document).on('mouseover', '.accountMenu', function() {
 		return false;
-	})
-	$(document).live('mouseover', function() {
+	});
+	$(document).on('mouseover', function() {
 		menu.hide();
-	})
-})
+	});
+});
